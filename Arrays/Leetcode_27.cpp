@@ -1,7 +1,7 @@
-// REMOVE DUPLICATE -> REMOVING ALL THE OCCURENCES
+// // REMOVE DUPLICATE -> REMOVING ALL THE OCCURENCES
 
 
-// brute force / optimal
+// // brute force / optimal
 #include<iostream>
 #include<vector>
 #include<bits/stdc++.h>
@@ -10,15 +10,15 @@ using namespace std;
 int finding( vector<int> &nums, int val){
     int n = nums.size();
 
-    int i = 0;
+    int k = 0;
     for(int j = 0; j<n; j++){
         if(nums[j] != val){
-            nums[i] = nums[j];
-            i++;
+            nums[k] = nums[j];
+            k++;
         }
     }
 
-    return nums.size();
+    return k;
 }
 
 int main(){
@@ -40,6 +40,7 @@ int main(){
 using namespace std;
 
 int finding( vector<int> &nums, int val){
+
     nums.erase(remove(nums.begin(),nums.end(),val),nums.end());
 
     return nums.size();
