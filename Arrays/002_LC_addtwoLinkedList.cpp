@@ -21,6 +21,7 @@ node * addtwo(node * head1, node * head2){
     node * temp1 = head1;
     node * temp2 = head2;
 
+    // creating a dummy node
     node * dummy = new node;
     dummy -> next = NULL;
     dummy -> data = 0;
